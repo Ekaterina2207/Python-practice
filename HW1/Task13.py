@@ -1,0 +1,40 @@
+a = list()
+b = list()
+a.append(4.5)
+a.append(3.4)
+a.extend((8.7, 1.3))
+b.append(14.5)
+b.append(3.4)
+b.extend((8.7, 11.3))
+a.insert(1, 100)
+a.insert(3, 100)
+b.insert(0, 200)
+b.insert(2, 200)
+print("Исходные списки:", a, b, sep='\n')
+del a[0]
+del b[0]
+a.remove(100)
+b.remove(200)
+print("\nПосле удалений:", a, b, sep='\n')
+sa = set(a)
+sb = set(b)
+sa_and_sb = sa & sb
+diff = sa - sb
+print("\nУникальные элементы:", diff)
+print("общие:", sa_and_sb)
+c = a + b
+c_asc = sorted(c)
+c_desc = sorted(c, reverse=True)
+sr_ar = sum(c[::2])/len(c[::2])
+import math
+sr_geom = math.prod(c[1::2])**(1/len(c[1::2]))
+c_max = max(c)
+c_min = min(c)
+print("\nИтоговые:")
+print("3-й:", c)
+print("Сортировка по возр.:", c_asc)
+print("Сортировка по убыв.:", c_desc)
+print("Среднее арифметическое=", sr_ar)
+print("Среднее геометрическое=", sr_geom)
+print("Макс. и мин.", c_max, c_min)
+

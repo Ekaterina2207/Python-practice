@@ -1,7 +1,7 @@
 from math import *
 
-a = int(input())
-b = int(input())
+a = int(input('Введите значение числа a: '))
+b = int(input('Введите значение числа b: '))
 info = '''
 a + b = {plus}
 a - b = {minus}
